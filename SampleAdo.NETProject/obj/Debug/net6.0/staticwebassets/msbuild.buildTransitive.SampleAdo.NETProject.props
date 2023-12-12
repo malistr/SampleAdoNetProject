@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\SampleAdo.NETProject.props" />
+</Project>
