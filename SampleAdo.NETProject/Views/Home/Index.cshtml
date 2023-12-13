@@ -1,16 +1,19 @@
 ﻿@model List<SampleAdo.NETProject.Models.Product>
+
 @{
 }
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
 
-<h2>Product List</h2>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css" >
 
-<table id="productsTable" class="display">
+<h2 >Product List </h2>
+
+<table id="productsTable" class="display" >
     <thead>
         <tr>
             <th>Product ID</th>
             <th>Product Name</th>
             <th>Unit Price</th>
+            <th>Update</th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +23,10 @@
                 <td>@item.ProductID</td>
                 <td>@item.ProductName</td>
                 <td>@item.UnitPrice</td>
+                <td>
+                    @* <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.ProductID">Update</a> *@
+                    <a href="/Home/Edit/@item.ProductID">Update</a>
+                </td>
             </tr>
         }
     </tbody>
