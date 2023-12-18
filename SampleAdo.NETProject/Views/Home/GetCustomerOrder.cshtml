@@ -1,0 +1,27 @@
+﻿@model List<SampleAdo.NETProject.Models.CustomerOrderCount>
+@{
+    ViewData["Title"] = "GetCustomerOrder";
+}
+
+<h1>GetCustomerOrder</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>Company Name</th>
+            <th>Order Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CustomerID</td>
+                <td>@item.CompanyName</td>
+                <td>@item.OrderCount</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

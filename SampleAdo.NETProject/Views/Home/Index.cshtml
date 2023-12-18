@@ -5,8 +5,8 @@
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css" >
 
-<h2 >Product List </h2>
-
+<h2>Product List </h2>
+<a href="/Home/Create">New Product</a>
 <table id="productsTable" class="display" >
     <thead>
         <tr>
@@ -14,6 +14,7 @@
             <th>Product Name</th>
             <th>Unit Price</th>
             <th>Update</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -27,6 +28,9 @@
                     @* <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.ProductID">Update</a> *@
                     <a href="/Home/Edit/@item.ProductID">Update</a>
                 </td>
+                <td>
+                    <a href="/Home/Delete/@item.ProductID">Delete</a>
+                </td>           
             </tr>
         }
     </tbody>
